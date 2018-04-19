@@ -1,3 +1,55 @@
+body{ color: #716d6d }
+#about h1{ text-align: left; }
+p{ font-size: 16px; }
+
+h1, h2, h3
+{
+  text-align: center;
+  color: #575252;
+}
+#people
+{
+  text-align: center;
+}
+.col-sm-3 h2 spam
+{
+  height: 100px;
+} 
+.col-sm-3 h2
+{
+  height: 70px;
+}
+
+.col-sm-3 p
+{
+  height: 160px;
+}
+.social-media
+{
+  text-align: center;
+}
+.navm-dark .nav.masthead-nav  a
+{
+  color: rgba(255,255,255,0.95) !important; 
+}
+.navm-dark .inner
+{
+  padding: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+#portfolio .row a img
+{
+  max-width: 260px;
+  max-height: 260px;
+}
+#portfolio .icon
+{
+  text-align: center;
+}
+#portfolio{ text-align: center; }
+#portfolio p { min-height: 155px; }
+#portfolio h3 { padding-bottom: 10px; }
 /*
  * Globals
  */
