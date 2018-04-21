@@ -50,6 +50,113 @@ h1, h2, h3
 #portfolio{ text-align: center; }
 #portfolio p { min-height: 155px; }
 #portfolio h3 { padding-bottom: 10px; }
+
+
+/* Slider*/
+
+.slider
+{
+  max-width: 70%;
+  width: 840px;
+  height: 500px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+.slide
+{
+  display: none;
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+}
+
+/* Quotes*/
+.quotes {   width: 70%;   margin: auto;}
+.quote-box
+{
+  overflow: hidden;
+  height: 180px;
+  position: relative;
+  box-shadow: 2px 4px 10px #888888;
+  padding: 40px 70px;
+  background-color: #f6f6f6; 
+}
+.quote-box::before
+{
+    position: relative;
+    content: '';
+    position: absolute;
+    left: 1px;
+    bottom: -16px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 17.5px 20px;
+    border-color: transparent transparent #cdcdcd transparent;
+    transform: rotate(50deg);
+    -moz-transform: rotate(50deg);
+    -webkit-transform: rotate(50deg);
+}
+.quote-box .text { visibility: hidden; position: absolute; height: 140px; width: 744px;  }
+.quote-box .text.active { visibility: visible; }
+.quotes .author { display: none; }
+.quotes .author.active { display: initial; }
+.quote-box p span
+{
+  position: relative;
+  font-family: "Open sans";
+  font-size: 18px;
+}
+.quote-box p 
+{
+  position: relative;
+  font-size: 16px;
+  font-family: inherit;
+  color: black;
+}
+.quote-box p span::before
+{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  margin-left: -38px;
+  background: url("../img/quote.png") no-repeat;
+  background-size: contain;
+}
+
+.quote-box p span::after
+{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  /*margin-bottom: -30px;*/
+  top:77px;
+  margin-right: -45px;
+  background: url("../img/quote flipped.png") no-repeat;
+  background-size: contain;
+}
+
+.quotes .author.active
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-items: center;
+}
+.quotes .author img
+{
+  margin-left: -10px;
+  padding-right: 10px; 
+}
+.quotes .author p{ text-align: center;  margin: 0; font-family: monospace; color: #2e2c2c;}
 /*
  * Globals
  */
