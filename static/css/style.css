@@ -72,91 +72,80 @@ h1, h2, h3
 }
 
 /* Quotes*/
-.quotes {   width: 70%;   margin: auto;}
-.quote-box
+
+.ArticleCopy .author
 {
-  overflow: hidden;
-  height: 180px;
-  position: relative;
-  box-shadow: 2px 4px 10px #888888;
-  padding: 40px 70px;
-  background-color: #f6f6f6; 
+  display: none !important;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+  margin-top: 40px;
 }
-.quote-box::before
+.ArticleCopy .author.active { display: flex !important; }
+.ArticleCopy .author img
 {
-    position: relative;
-    content: '';
-    position: absolute;
-    left: 1px;
-    bottom: -16px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 17.5px 20px;
-    border-color: transparent transparent #cdcdcd transparent;
-    transform: rotate(50deg);
-    -moz-transform: rotate(50deg);
-    -webkit-transform: rotate(50deg);
+margin-left: -10px;
+padding-right: 10px; 
+padding-bottom: 10px;
 }
-.quote-box .text { visibility: hidden; position: absolute; height: 140px; width: 744px;  }
-.quote-box .text.active { visibility: visible; }
-.quotes .author { display: none; }
-.quotes .author.active { display: initial; }
-.quote-box p span
-{
-  position: relative;
-  font-family: "Open sans";
-  font-size: 18px;
+.ArticleCopy .author p{ text-align: center;  margin: 0; font-family: monospace; color: #2e2c2c; display: inherit;}
+
+*, *:before, *:after{
+    margin: 0;
+    padding: 0;
+    direction: ltr;
+    box-sizing: border-box;
 }
-.quote-box p 
-{
-  position: relative;
+html{
   font-size: 16px;
-  font-family: inherit;
-  color: black;
+  line-height: 1.8;
 }
-.quote-box p span::before
-{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 40px;
-  height: 40px;
-  margin-top: -20px;
-  margin-left: -38px;
-  background: url("../img/quote.png") no-repeat;
-  background-size: contain;
-}
-
-.quote-box p span::after
-{
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 40px;
-  height: 40px;
-  /*margin-bottom: -30px;*/
-  top:77px;
-  margin-right: -45px;
-  background: url("../img/quote flipped.png") no-repeat;
-  background-size: contain;
-}
-
-.quotes .author.active
-{
+.ArticleCopy{
   display: flex;
   flex-direction: row;
-  align-items: center;
-  align-items: center;
+  font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+  width: 80%;
+  margin:0 auto;
+  border: 1px solid #ddd;
+  padding: 3rem;
 }
-.quotes .author img
-{
-  margin-left: -10px;
-  padding-right: 10px; 
+.ArticleCopy p {
+    text-rendering: optimizeLegibility;
 }
-.quotes .author p{ text-align: center;  margin: 0; font-family: monospace; color: #2e2c2c;}
+.ArticleCopy div{  display: none; }
+.ArticleCopy .active{display: block; }
+.ArticleCopy blockquote {
+    border-radius: 3px;
+    position: relative;  /*  <--- */
+    font-style: italic;
+    text-align: center;
+    padding: 1rem 1.2rem;
+    width: 80%;  /* create space for the quotes */
+    color: #4a4a4a;
+    margin: 1rem auto 2rem;
+    color: #4a4a4a;
+    background: #E8E8E8;
+}
+/* -- create the quotation marks -- */
+.ArticleCopy blockquote:before,
+.ArticleCopy blockquote:after{
+    font-family: FontAwesome;
+    position: absolute;
+    /* -- inside the relative position of blockquote -- */
+    top: 13px;
+    color: #E8E8E8;
+    font-size: 34px;
+}
+.ArticleCopy blockquote:before{
+    content: "\f10d";
+    margin-right: 13px;
+    right: 100%;
+}
+.ArticleCopy blockquote:after{
+    content: "\f10e";
+    margin-left: 13px;
+    left: 100%;  
+}
 /*
  * Globals
  */
