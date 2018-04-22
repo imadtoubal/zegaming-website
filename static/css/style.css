@@ -1,3 +1,151 @@
+body{ color: #716d6d }
+#about h1{ text-align: left; }
+p{ font-size: 16px; }
+
+h1, h2, h3
+{
+  text-align: center;
+  color: #575252;
+}
+#people
+{
+  text-align: center;
+}
+.col-sm-3 h2 spam
+{
+  height: 100px;
+} 
+.col-sm-3 h2
+{
+  height: 70px;
+}
+
+.col-sm-3 p
+{
+  height: 160px;
+}
+.social-media
+{
+  text-align: center;
+}
+.navm-dark .nav.masthead-nav  a
+{
+  color: rgba(255,255,255,0.95) !important; 
+}
+.navm-dark .inner
+{
+  padding: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+#portfolio .row a img
+{
+  max-width: 260px;
+  max-height: 260px;
+}
+#portfolio .icon
+{
+  text-align: center;
+}
+#portfolio{ text-align: center; }
+#portfolio p { min-height: 155px; }
+#portfolio h3 { padding-bottom: 10px; }
+
+
+/* Slider*/
+
+.slider
+{
+  max-width: 70%;
+  width: 840px;
+  height: 500px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+.slide
+{
+  display: none;
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+}
+
+/* Quotes*/
+
+.ArticleCopy .author
+{
+  display: none !important;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+  margin-top: 40px;
+}
+.ArticleCopy .author.active { display: flex !important; }
+.ArticleCopy .author img
+{
+margin-left: -10px;
+padding-right: 10px; 
+padding-bottom: 10px;
+}
+.ArticleCopy .author p{ text-align: center;  margin: 0; font-family: monospace; color: #2e2c2c; display: inherit;}
+
+*, *:before, *:after{
+    margin: 0;
+    padding: 0;
+    direction: ltr;
+    box-sizing: border-box;
+}
+html{
+  font-size: 16px;
+  line-height: 1.8;
+}
+.ArticleCopy{
+  display: flex;
+  flex-direction: row;
+  font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+  width: 80%;
+  margin:0 auto;
+  border: 1px solid #ddd;
+  padding: 3rem;
+}
+.ArticleCopy p {
+    text-rendering: optimizeLegibility;
+}
+.ArticleCopy div{  display: none; }
+.ArticleCopy .active{display: block; }
+.ArticleCopy blockquote {
+    border-radius: 3px;
+    position: relative;  /*  <--- */
+    font-style: italic;
+    text-align: center;
+    padding: 1rem 1.2rem;
+    width: 80%;  /* create space for the quotes */
+    color: #4a4a4a;
+    margin: 1rem auto 2rem;
+    color: #4a4a4a;
+    background: #E8E8E8;
+}
+/* -- create the quotation marks -- */
+.ArticleCopy blockquote:before,
+.ArticleCopy blockquote:after{
+    font-family: FontAwesome;
+    position: absolute;
+    /* -- inside the relative position of blockquote -- */
+    top: 13px;
+    color: #E8E8E8;
+    font-size: 34px;
+}
+.ArticleCopy blockquote:before{
+    content: "\f10d";
+    margin-right: 13px;
+    right: 100%;
+}
+.ArticleCopy blockquote:after{
+    content: "\f10e";
+    margin-left: 13px;
+    left: 100%;  
+}
 /*
  * Globals
  */
